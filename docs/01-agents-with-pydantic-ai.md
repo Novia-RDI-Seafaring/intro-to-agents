@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-header: 'Hackathon · Agents with Pydantic AI'
+header: 'Agents with Pydantic AI · Part 1'
 footer: 'Christoffer Björkskog · Novia UAS · 2026'
 style: |
   section {
@@ -66,7 +66,7 @@ style: |
 
 ## What an agent is, and how to build one in ~80 lines
 
-**Hackathon kickoff**
+**Part 1**
 Novia UAS · 2026
 
 ---
@@ -427,13 +427,13 @@ Your `@agent.tool_plain` tools and the MCP-provided tools live side by side — 
 
 # Part 3
 
-## Hackathon exercise
+## Exercise
 
 ---
 
 ## Build a project assistant
 
-Start from `code/agent.py` in this folder. It has three tools: `list_files`, `read_file`, `edit_file`.
+Start from [`code/agent.py`](https://github.com/Novia-RDI-Seafaring/intro-to-agents/blob/main/code/agent.py) in the repo. It has three tools: `list_files`, `read_file`, `edit_file`.
 
 **Your job, in three steps:**
 
@@ -471,6 +471,6 @@ Get fluent with this. The rest is variations on the theme.
 
 # Now go build
 
-## Code is in `courses/hackathon/code/`
+## [github.com/Novia-RDI-Seafaring/intro-to-agents](https://github.com/Novia-RDI-Seafaring/intro-to-agents)
 
 Questions → ask. Bugs → grep first, ask second.

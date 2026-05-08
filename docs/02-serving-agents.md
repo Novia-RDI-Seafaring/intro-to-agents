@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-header: 'Hackathon · Serving Agents'
+header: 'Agents with Pydantic AI · Part 2'
 footer: 'Christoffer Björkskog · Novia UAS · 2026'
 style: |
   section {
@@ -66,7 +66,7 @@ style: |
 
 ## From `agent.run_sync(...)` to something humans and other agents can talk to
 
-**Hackathon · Part 2**
+**Part 2**
 Novia UAS · 2026
 
 ---
@@ -259,7 +259,7 @@ If you're building from scratch and need full control of the UI, you can also wr
 ## One agent file, three entry points
 
 ```
-courses/hackathon/code/
+code/
 ├── agent.py          ← Agent(...) + tools, the actual logic
 ├── serve_cli.py      ← agent.to_cli_sync()
 └── serve_web.py      ← agent.to_a2a()  +  agent.to_ag_ui()
@@ -304,4 +304,4 @@ That last point is the win: **interface is decoupled from behaviour**.
 
 # Now ship it
 
-## Code in `courses/hackathon/code/`
+## [github.com/Novia-RDI-Seafaring/intro-to-agents](https://github.com/Novia-RDI-Seafaring/intro-to-agents/tree/main/code)

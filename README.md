@@ -1,37 +1,31 @@
 # intro-to-agents
 
-Hackathon slides + runnable code: **what an agent is, and how to build one with Pydantic AI**.
+Slides and runnable code on building agents with Pydantic AI. Used for an Intelligent Systems session at Novia UAS, 2026.
 
-Source of truth lives in `docs/` (Marp markdown). HTML for browser viewing is built by CI and published to GitHub Pages.
+Slides published at https://novia-rdi-seafaring.github.io/intro-to-agents/
 
 ## Layout
 
 ```
-docs/                              # Marp source — the truth.
-  01-agents-with-pydantic-ai.md    # Deck 1: agent = LLM + loop + tools, MCP.
-  02-serving-agents.md             # Deck 2: to_cli_sync, to_a2a, to_ag_ui.
-code/                              # Runnable Python (uv project).
-  agent.py                         # Minimal Pydantic AI agent.
-  serve_cli.py                     # agent.to_cli_sync()
-  serve_web.py                     # agent.to_a2a() + agent.to_ag_ui()
-.github/workflows/pages.yml        # Builds slides → Pages on every push to main.
+docs/                              Marp markdown — the slides.
+  01-agents-with-pydantic-ai.md    Agent = LLM + loop + tools, MCP.
+  02-serving-agents.md             to_cli_sync, to_a2a, to_ag_ui.
+code/                              Python (uv project).
+  agent.py                         Minimal Pydantic AI agent.
+  serve_cli.py                     agent.to_cli_sync()
+  serve_web.py                     agent.to_a2a() + agent.to_ag_ui()
+.github/workflows/pages.yml        Builds slides on push to main.
 ```
 
-## View the slides
-
-Published at **https://novia-rdi-seafaring.github.io/intro-to-agents/** (after the first successful Pages deploy — see *Setup* below).
-
-## Build locally
-
-Slides:
+## Build slides locally
 
 ```bash
-npm install                # one-time, pulls marp-cli
+npm install
 npm run build              # docs/*.md → _site/*.html
-npm run watch              # live-reload on edit, serves on http://localhost:8080
+npm run watch              # live-reload on http://localhost:8080
 ```
 
-Code:
+## Run the code
 
 ```bash
 cd code
@@ -40,12 +34,6 @@ export OPENAI_API_KEY=sk-...
 uv run python agent.py "What files are here?"
 ```
 
-## Setup (one-time, after cloning a fresh repo)
+## First-time GitHub setup
 
-In the repo's GitHub settings → **Pages** → **Source: GitHub Actions**.
-
-That's it — `.github/workflows/pages.yml` does the rest on every push to `main`.
-
-## Editing the slides
-
-The Marp frontmatter is shared between decks; copy it from an existing deck when starting a new one. New decks dropped into `docs/` are picked up automatically by the workflow and listed on the Pages index.
+Settings → Pages → Source: **GitHub Actions**. After that the workflow handles every push to `main`.

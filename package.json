@@ -1,7 +1,7 @@
 {
   "name": "intro-to-agents",
   "private": true,
-  "description": "Hackathon slides + code: building agents with Pydantic AI.",
+  "description": "Slides and runnable code on building agents with Pydantic AI.",
   "scripts": {
     "build": "marp --input-dir docs --output _site --html --allow-local-files",
     "watch": "marp --input-dir docs --output _site --html --allow-local-files --server",

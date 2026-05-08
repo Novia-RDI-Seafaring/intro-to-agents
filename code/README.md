@@ -1,13 +1,12 @@
-# Hackathon — Pydantic AI agent
+# Pydantic AI agent — runnable code
 
-A minimal, runnable agent in ~80 lines. Slides explaining the ideas live one folder up at `01-agents-with-pydantic-ai.md`.
+A minimal agent in ~80 lines. The slides that walk through it are at https://novia-rdi-seafaring.github.io/intro-to-agents/
 
 ## Setup
 
 With `uv` (recommended):
 
 ```bash
-cd courses/hackathon/code
 uv sync
 export OPENAI_API_KEY=sk-...
 uv run python agent.py "What files are here? Pick a Python file and summarize it."
@@ -25,11 +24,11 @@ Run with no arguments for an interactive REPL.
 
 ## What's inside
 
-- `agent.py` — the agent itself. `Agent("openai:gpt-4o-mini", ...)`, three tools (`list_files`, `read_file`, `edit_file`), and a `run()` helper that prints every tool call so you can watch the loop.
-- `serve_cli.py` — exposes the same agent as an interactive terminal REPL via `agent.to_cli_sync()`.
-- `serve_web.py` — exposes the same agent over HTTP via `agent.to_a2a()` (agent-to-agent) and `agent.to_ag_ui()` (web chat UIs).
+- `agent.py` — `Agent("openai:gpt-5", ...)`, three tools (`list_files`, `read_file`, `edit_file`), and a `run()` helper that prints every tool call so you can watch the loop.
+- `serve_cli.py` — same agent as an interactive terminal REPL via `agent.to_cli_sync()`.
+- `serve_web.py` — same agent over HTTP via `agent.to_a2a()` (agent-to-agent) and `agent.to_ag_ui()` (web chat UIs).
 
-The behaviour lives in `agent.py`. The serve scripts are one-liners that pick who can talk to it. Don't fork the agent to add a new interface.
+The agent lives in `agent.py`. The serve scripts pick who can talk to it.
 
 ## Talking to the agent three ways
 
