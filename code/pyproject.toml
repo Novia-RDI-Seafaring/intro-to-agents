@@ -1,0 +1,8 @@
+[project]
+name = "hackathon-agent"
+version = "0.1.0"
+description = "Minimal Pydantic AI agent for the Novia hackathon"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic-ai>=0.0.40",
+]

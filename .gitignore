@@ -1,0 +1,28 @@
+# Build output
+_site/
+slides/html/
+slides/pdf/
+*.html.bak
+
+# Node
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Python (code/)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Secrets
+.env
+.env.*
+!.env.example
