@@ -4,6 +4,8 @@ Slides and runnable code on building agents with Pydantic AI. Used for an Intell
 
 Slides published at https://novia-rdi-seafaring.github.io/intro-to-agents/
 
+A curated reading list lives in [RESOURCES.md](RESOURCES.md).
+
 ## Layout
 
 ```
